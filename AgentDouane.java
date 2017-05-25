@@ -1,7 +1,7 @@
 package sn.com.douane.ejb.rc.model.entities;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.time.Instant;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -60,7 +60,7 @@ public class AgentDouane implements Serializable{
     private String rcRefAut;
 	
 	@Column(name="RCDATEAUT")
-    private Date rcDateAut;
+    private Instant rcDateAut;
 	
 	@Column(name="RCNOMAGENT", length=50)
     private String rcNomAgent;
@@ -75,7 +75,7 @@ public class AgentDouane implements Serializable{
 	private String rcUserMaj; 
 	
 	@Column(name="DATEMAJ")
-	private Date dateMaj; 
+	private Instant dateMaj; 
 	
 	@Column(name="IDUVP")
 	private Long idUvp;

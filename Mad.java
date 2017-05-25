@@ -1,7 +1,7 @@
 package sn.com.douane.ejb.rc.model.entities;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.time.Instant;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -57,7 +57,7 @@ public class Mad implements Serializable {
 	private String emplacementMad;
 
 	@Column(name = "DATEAGREEMENTMAD")
-	private Date dateAgreementMad;	
+	private Instant dateAgreementMad;	
 
 	@Column(name = "RCCODEBURDOUANE",columnDefinition="CHAR(3)",nullable = false)
 	private String rcCodeBurdouane;
