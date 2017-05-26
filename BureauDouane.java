@@ -77,27 +77,12 @@ public class BureauDouane implements Serializable {
 
 	@Column(name = "IDCOMPTE")
 	private Long idcompte;	
-	
-	@ManyToOne
-	@JoinColumn(name = "RCCOMPETENCE", insertable = false, updatable = false, nullable = false)
-	private CompBureau compBureau;
 
-	@ManyToOne
-	@JoinColumn(name = "RCGENREBUR", insertable = false, updatable = false, nullable = false)
-	private GenreBureau genreBureau;
 
-	@ManyToOne
-	@JoinColumn(name = "RCTYPEBURDOUANE", insertable = false, updatable = false, nullable = false)
-	private TypeBureau typeBureau;
+	private List<AgentDouane> agentDouaneAffs;
 
-	@OneToMany(mappedBy = "burprodbur")
-	private List<BureauProduit> bureauxProduit = new ArrayList<BureauProduit>();
 
-	@OneToMany(mappedBy = "burDouaneAff")
-	private List<AgentDouane> agentDouaneAffs = new ArrayList<AgentDouane>();
-
-	@OneToMany(mappedBy = "burDouaneAct")
-	private List<AgentDouane> agentDouaneActs = new ArrayList<AgentDouane>();
+	private List<AgentDouane> agentDouaneActs ;
 
 
 	
